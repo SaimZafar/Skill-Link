@@ -60,33 +60,77 @@ Oracle XE relational database.
 ---
 
 ## Project Structure
+
+```
 SkillLink/
 │
+├── README.md
+│
 ├── database/
-│   ├── 01_sequences.sql       # Auto-increment sequences
-│   ├── 02_create_tables.sql   # All 15 CREATE TABLE statements
-│   ├── 03_insert_data.sql     # Sample data with Pakistani context
-│   └── 04_queries.sql         # All JOIN and aggregate queries
+│   ├── 01_sequences.sql
+│   ├── 02_create_tables.sql
+│   ├── 03_insert_data.sql
+│   └── 04_queries.sql
 │
 ├── backend/
-│   ├── app.js                 # Express server entry point
-│   ├── .env.example           # Environment variable template
-│   ├── config/db.js           # Oracle connection pool
-│   ├── middleware/auth.js     # JWT verification middleware
-│   └── routes/                # 10 route files covering all tables
+│   ├── app.js
+│   ├── package.json
+│   ├── .env.example
+│   ├── config/
+│   │   └── db.js
+│   ├── middleware/
+│   │   └── auth.js
+│   └── routes/
+│       ├── auth.js
+│       ├── projects.js
+│       ├── bids.js
+│       ├── contracts.js
+│       ├── payments.js
+│       ├── reviews.js
+│       ├── disputes.js
+│       ├── notifications.js
+│       ├── admin.js
+│       └── adminAuth.js
 │
 ├── frontend/
-│   ├── src/
-│   │   ├── context/           # AuthContext for global state
-│   │   ├── components/        # Sidebar, PrivateRoute, AdminRoute
-│   │   └── pages/             # All client, freelancer and admin pages
+│   ├── package.json
+│   ├── public/
+│   └── src/
+│       ├── App.js
+│       ├── context/
+│       │   └── AuthContext.js
+│       ├── components/
+│       │   ├── Sidebar.js
+│       │   ├── PrivateRoute.js
+│       │   └── AdminRoute.js
+│       └── pages/
+│           ├── Login.js
+│           ├── Register.js
+│           ├── Dashboard.js
+│           ├── Projects.js
+│           ├── Bids.js
+│           ├── Contracts.js
+│           ├── Payments.js
+│           ├── Reviews.js
+│           ├── Disputes.js
+│           ├── Notifications.js
+│           ├── AdminDashboard.js
+│           ├── AdminUsers.js
+│           ├── AdminProjects.js
+│           ├── AdminBids.js
+│           ├── AdminContracts.js
+│           ├── AdminPayments.js
+│           ├── AdminReviews.js
+│           ├── AdminSkills.js
+│           ├── AdminDisputes.js
+│           └── AdminNotifications.js
 │
 └── docs/
-├── ERD.png                # Entity Relationship Diagram
-├── RDM.png                # Relational Data Model
-└── SkillLink_Report.pdf   # Complete system report
-
----
+    ├── ERD.png
+    ├── RDM.png
+    ├── SkillLink_Proposal.pdf
+    └── SkillLink_Complete_Report.pdf
+```
 
 ## Setup Instructions
 
